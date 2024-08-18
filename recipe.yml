@@ -27,6 +27,7 @@ stages:
     commands:
     - wget https://openrgb.org/releases/release_0.9/60-openrgb.rules
     - mv 60-openrgb.rules /usr/lib/udev/rules.d
+    - echo "i2c-dev i2c-piix4" > /usr/lib/modules-load.d/i2c.conf
   
   - name: i2c
     type: apt
